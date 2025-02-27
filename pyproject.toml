@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13.1"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.10.0",
+    "opencv-python>=4.11.0.86",
+    "pillow>=11.1.0",
+]
 
 [project.optional-dependencies]
 cpu = ["torch", "torchvision"]
@@ -32,3 +36,8 @@ explicit = true
 name = "pytorch-cu124"
 url = "https://download.pytorch.org/whl/cu124"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
